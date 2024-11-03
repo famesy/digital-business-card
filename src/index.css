@@ -1,0 +1,169 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+a {
+  text-decoration: none;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Start */
+body {
+  min-height: 100vh;
+  background-color: #23252C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  background-color: #F5F5F5;
+  width: 320px;
+  border-radius: 12px;
+}
+
+#footer {
+  background-color: #D5D4D8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 0;
+  border-radius: 12px;
+}
+
+.main {
+  padding: 20px 35px 48px;
+}
+
+.card-name,
+.card-role,
+.card-website {
+  text-align: center;
+}
+
+.card-name {
+  margin: 20px 0 0px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.card-role {
+  margin-bottom: 9px;
+  color: #F47D27;
+  font-size: 0.8rem;
+}
+
+.card-website {
+  font-size: 0.65rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 17px;
+}
+
+.card-website:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  gap: 17px;
+  margin-bottom: 25px;
+}
+
+.email-button,
+.linkedin-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  height: 34px;
+  width: 115px;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+}
+
+.email-button {
+  color: #23252C;
+}
+
+.linkedin-button {
+  border: none;
+  background-color: #297FE5;
+}
+
+.linkedin-button:hover,
+.email-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.linkedin-button:active,
+.email-button:active {
+  font-weight: bold;
+}
+
+.linkedin-button span {
+  color: white;
+}
+
+.email-button > img {
+  width: 16px;
+  height: 16px%;
+}
+
+.card-heading {
+  margin-bottom: 5px;
+}
+
+.card-paragraph {
+  font-size: 0.7rem;
+  margin-bottom: 27px;
+}
+
+.card-paragraph:last-child {
+  margin-bottom: 0px;
+}
